@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './SearchField.css';
+import MovieCard from './movieCard';
 
 const SearchFlield = () => {
     const [searchText, setSearchText] = useState('');
@@ -35,12 +36,12 @@ const SearchFlield = () => {
 
     return (
         <div>
-            <form className='search-boxform search-box'>
+            <form className='search-box'>
                 <input type="text" placeholder=" " value={searchText} onChange={updateText}/>
                 <button type="reset" onClick={clearText}></button>
             </form> 
 
-            <div>
+            <div className='movie-section'>
                 {searchResult
                 .filter(item => {
                     if (searchResult === '') return item
@@ -48,7 +49,7 @@ const SearchFlield = () => {
                     else return null;
                 }).map((val, key) => {
                     console.log(val)
-                   return <div key={key}>{val.Title}</div>
+                   return <MovieCard key={key} props={val}/>
                 })}
             </div>
         </div>

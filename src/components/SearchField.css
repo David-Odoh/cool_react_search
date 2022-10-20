@@ -11,11 +11,10 @@
 	 justify-content: center;
      padding-top: 10vh;
 	 flex-wrap: nowrap;
-	 overflow: hidden;
 }
  .search-box {
 	 font-size: 20px;
-	 border: solid 0.3em #000;
+	 border: solid 0.25em #000;
 	 display: inline-block;
 	 position: relative;
 	 border-radius: 2.5em;
@@ -75,3 +74,11 @@
 	 transition: transform 150ms ease-out, opacity 150ms ease-out;
 }
  
+.movie-section {
+    padding: 40px 10px;
+    display: flex;
+    width: 90vw;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
